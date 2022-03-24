@@ -13,7 +13,6 @@ export function MultipleChoiceQuestion({
     function UpdateOption(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
     }
-
     return (
         <div>
             <h3>Multiple Choice Question</h3>
@@ -22,7 +21,7 @@ export function MultipleChoiceQuestion({
                 <Form.Select value={choice} onChange={UpdateOption}>
                     {options.map((option: string) => (
                         <option key={option} value={option}>
-                            {options}
+                            {option}
                         </option>
                     ))}
                 </Form.Select>
